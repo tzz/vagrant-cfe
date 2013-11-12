@@ -21,3 +21,9 @@ vagrant ssh -- --type=single_ubuntu_source
 # destroy it
 vagrant destroy -- --type=single_ubuntu_source
 ```
+
+Command line access: you can simulate the steps yourself.  For example, here's `single_centos_hub`:
+
+```
+./install_centos_packages.sh /vagrant/resources/packages/cfengine-nova-hub-3.5.2-1.x86_64.rpm; ./bootstrap.sh 10.0.0.20; ./install_dc.sh https://github.com/cfengine/design-center.git master; ./setup_custom_masterfiles.sh 1; ./setup_hub.sh 1; ./setup_converge.sh 1
+```
