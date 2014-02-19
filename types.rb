@@ -141,6 +141,11 @@ module Types
       .merge(TEMPLATES[:generic])
       .merge({ :ip => "10.0.0.20", :count => 1 }),
 
+    "single_centos_5" => {}
+      .merge(FRAGMENTS[:inone])
+      .merge(FRAGMENTS[:centos_5_9])
+      .merge({ :ip => "10.0.0.20", :count => 1 }),
+
     "single_centos" => {}
       .merge(FRAGMENTS[:inone])
       .merge(FRAGMENTS[:centos_6_4])
@@ -150,6 +155,11 @@ module Types
       .merge(FRAGMENTS[:inone])
       .merge(FRAGMENTS[:centos_6_4])
       .merge(TEMPLATES[:jenkins])
+      .merge({ :ip => "10.0.0.20", :count => 1 }),
+
+    "single_ubuntu_10" => {}
+      .merge(FRAGMENTS[:inone])
+      .merge(FRAGMENTS[:ubuntu_10_10])
       .merge({ :ip => "10.0.0.20", :count => 1 }),
 
     "single_ubuntu" => {}
