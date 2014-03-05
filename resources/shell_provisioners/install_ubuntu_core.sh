@@ -9,7 +9,8 @@ cd /var/tmp
 apt-get -qq update
 apt-get -qq -y install git autoconf libtool libtokyocabinet-dev libpcre3-dev libxml2-dev libvirt-dev libacl1-dev bison flex make libssl-dev libpam-dev
 
-git clone -q --depth 1 https://git.gitorious.org/mdb/mdb.git && cd mdb/libraries/liblmdb && make install
+git clone -q https://git.gitorious.org/mdb/mdb.git && cd mdb/libraries/liblmdb && make install
+ldconfig
 
 cd /var/tmp
 
